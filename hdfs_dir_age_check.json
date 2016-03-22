@@ -1,0 +1,45 @@
+{
+    "file_age_hours": "24",
+    "directories_to_monitor": {
+        "directory1": [
+            {
+            "name": "/directory1",
+            "folders_files_blacklist": [
+                "file1",
+                "file2",
+                "file3",
+                "file4"
+                ]
+            }
+        ],
+        "directory2": [
+            {
+            "name": "/directory2",
+            "folders_files_blacklist": [
+                "file1",
+                "file2",
+                "file3"
+                ]
+            }
+        ],
+        "directory3": [
+            {
+            "name": "/directory3",
+            "folders_files_blacklist": [
+                "file1",
+                "file2",
+                "file3",
+                "file4"
+                ]
+            }
+        ]
+    },
+    "httpfs_or_webhdfs_host": "hostname",
+    "httpfs_or_webhdfs_port": "14000",
+    "emails_to_send_alert_to": [
+        "user1@compa.com",
+        "user2@compa.com"
+    ],
+    "source_email_address": "hadoop@company.com",
+    "logfile": "/tmp/hdfs_dir_age_check.log"
+}
