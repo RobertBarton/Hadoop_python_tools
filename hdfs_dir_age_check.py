@@ -40,7 +40,7 @@
 #        ...
 #    ],
 #    "source_email_address": "server@email.com",
-#	 "logfile": "/tmp/hdfs_file_age_check.log"
+#	 "logfile": "/tmp/hdfs_dir_age_check.log"
 #}
 #######################################################
 #
