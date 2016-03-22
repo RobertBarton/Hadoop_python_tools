@@ -44,7 +44,7 @@
 #}
 #######################################################
 #
-# Author: Robert Barton - robertba@square-enix.com
+# Author: Robert Barton - robert.william.barton@hotmail.co.uk
 #
 #######################################################
 
@@ -99,7 +99,7 @@ def get_old_hdfs_files(hdfs_api_host, hdfs_api_port, directories_to_monitor, fil
 
 # Create the content of the Alert message
 def compose_the_alert(get_old_hdfs_files, file_age_hours):
-    message = "The following files in Pluto HDFS are over %s hours old, please investigate:\n\n" % file_age_hours
+    message = "The following files in HDFS are over %s hours old, please investigate:\n\n" % file_age_hours
     for f in get_old_hdfs_files:
         message = message + f + "\n"
     return message
@@ -109,7 +109,7 @@ def compose_the_alert(get_old_hdfs_files, file_age_hours):
 def send_out_the_alert(compose_the_alert, emails_to_send_alert_to, source_email_address, file_age_hours):
     msg = MIMEText(compose_the_alert, 'plain')
     for mail in emails_to_send_alert_to:
-        msg['Subject'] = 'ALERT: Pluto HDFS files over %d Hours Old, PLEASE INVESTIGATE' % file_age_hours
+        msg['Subject'] = 'ALERT: HDFS files over %d Hours Old, PLEASE INVESTIGATE' % file_age_hours
         msg['From'] = source_email_address
         msg['To'] = mail
         s = smtplib.SMTP('localhost')
